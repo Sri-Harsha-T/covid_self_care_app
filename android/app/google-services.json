@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "790993379869",
+    "project_id": "covidselfcare-9ca9a",
+    "storage_bucket": "covidselfcare-9ca9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790993379869:android:21753ca3586a293d8edcf4",
+        "android_client_info": {
+          "package_name": "com.cs251_project.flutterapp.covid_self_care_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790993379869-j8c5v98fvs7aoe1s2at1j9m4lbiq23cj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKCrEbDRD-qCVAfnYoEuN3NIL9dRAfXzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790993379869-j8c5v98fvs7aoe1s2at1j9m4lbiq23cj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
