@@ -79,7 +79,7 @@ class CreditsPage extends StatelessWidget {
                                             WidgetEnterAnimation(
                                               delay: 0,
                                               child: AutoSizeText(
-                                                "by Prabhat",
+                                                "For CS251 Project",
                                                 style: TextStyle(
                                                   color: Colors.white.withOpacity(0.9),
                                                   fontSize: 28,
@@ -152,7 +152,7 @@ class CreditsPage extends StatelessWidget {
                                     child: Material(
                                       type: MaterialType.transparency,
                                       child: InkWell(
-                                        onTap: () => _launchURL("https://facebook.com/iPrabhat404"),
+                                        onTap: () => _launchURL("https://facebook.com/"),
                                         borderRadius: BorderRadius.circular(50.0),
                                         highlightColor: Color(0xFF3B5998).withOpacity(0.1),
                                         splashColor: Color(0xFF3B5998).withOpacity(0.25),
@@ -184,7 +184,7 @@ class CreditsPage extends StatelessWidget {
                                     child: Material(
                                       type: MaterialType.transparency,
                                       child: InkWell(
-                                        onTap: () => _launchURL("https://twitter.com/crazybytes_in"),
+                                        onTap: () => _launchURL("https://twitter.com/"),
                                         borderRadius: BorderRadius.circular(50.0),
                                         highlightColor: Color(0xFF00ACEE).withOpacity(0.1),
                                         splashColor: Color(0xFF00ACEE).withOpacity(0.25),
@@ -216,7 +216,7 @@ class CreditsPage extends StatelessWidget {
                                     child: Material(
                                       type: MaterialType.transparency,
                                       child: InkWell(
-                                        onTap: () => _launchURL("https://github.com/iPrabhat404"),
+                                        onTap: () => _launchURL("https://github.com/"),
                                         borderRadius: BorderRadius.circular(50.0),
                                         highlightColor: Color(0xFF211F1F).withOpacity(0.1),
                                         splashColor: Color(0xFF211F1F).withOpacity(0.25),

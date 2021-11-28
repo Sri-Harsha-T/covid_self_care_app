@@ -2,7 +2,7 @@ part of 'statewise_bloc.dart';
 
 @immutable
 abstract class StatewiseEvent {
-  late EventHandler swe;
+  //late EventHandler swe;
   StatewiseEvent();
 }
 

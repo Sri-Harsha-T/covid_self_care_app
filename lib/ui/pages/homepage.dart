@@ -65,6 +65,7 @@ class HomePage extends StatelessWidget {
                               try {
                                 //bool listen = false;
                                 if (state is StatewiseInitial) {
+                                  //print('Hello');
                                   BlocProvider.of<StatewiseBloc>(context).add(
                                       GetPatientData());
                                 }
@@ -82,8 +83,8 @@ class HomePage extends StatelessWidget {
                               }
                               catch(error){
                                 print(error);
-                                return showLoadingScreen();
-                              //yield StatewiseError({error : "Exception thrown at BlocBuilder"});
+                                //yield StatewiseError({error : "Exception thrown at BlocBuilder"});
+                                return showNoDataScreen();
                               }
                             },
                           )

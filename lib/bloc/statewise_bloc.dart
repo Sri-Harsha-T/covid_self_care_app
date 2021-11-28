@@ -14,24 +14,29 @@ class StatewiseBloc extends Bloc<StatewiseEvent, StatewiseState> {
 
   StatewiseBloc({required this.patientRepository}):
       //assert(this.patientRepository!=null),
-      super(const StatewiseInitial());
+      super(const StatewiseInitial()){
+      on<StatewiseEvent> (_onStatewiseEvent);
+    }
 
   StatewiseState get initialState => const StatewiseInitial();
 
-  Stream<StatewiseState> mapEventToState(
-    StatewiseEvent event,
-  ) async* {
-    // TODO: implement mapEventToState
-    yield const StatewiseLoading();
-    on<GetPatientData>((event, emit)async {
-      try {
-        final patientData = await patientRepository.fetchPatientData();
-        emit (StatewiseLoaded(patientDataMap: patientData));
 
+  void _onStatewiseEvent(StatewiseEvent event, Emitter<StatewiseState> emitter){
+    // TODO: implement mapEventToState
+      //emit(const StatewiseLoading()) ;
+      on<GetPatientData>(_onGetPatientData);
+      /*if (event is GetPatientData) {
+      try {
+      final patientData = await patientRepository.fetchPatientData();
+      yield StatewiseLoaded(patientDataMap: patientData);
       } catch (error) {
-        print(error);
-        emit(StatewiseError(error: "Data couldn't be loaded."));
+      print(error);
+      yield const StatewiseError(error: "Data couldn't be loaded.");
       }
-    });
+      }*/
+  }
+  Future<void> _onGetPatientData(GetPatientData event, Emitter<StatewiseState> emitter) async {
+    final patientData = await patientRepository.fetchPatientData();
+    emit(StatewiseLoaded(patientDataMap: patientData));
   }
 }

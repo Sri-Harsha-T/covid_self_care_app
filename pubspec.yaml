@@ -55,6 +55,7 @@ dependencies:
   flutter_svg: ^0.23.0+1
   fluttertoast: ^8.0.8
   flare_flutter: ^3.0.2
+  flutter_staggered_animations: ^1.0.0
 
 dev_dependencies:
   flutter_test:

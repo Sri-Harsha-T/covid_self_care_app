@@ -17,12 +17,12 @@ class CovidPatientRepository extends PatientRepository {
   static const String CLASS_TAG = "PatientRepository";
   @override
   Future<Map<String, List>> fetchPatientData() async {
-    Map<String, List> patientDataMap = {};
+    Map<String, List> patientDataMap = Map();
     List<MyStateData> stateDataList = [];
     List<DailyData> dailyDataList = [];
     String url = "https://api.covid19india.org/data.json";
     var res = await http.get(Uri.parse(Uri.encodeFull(url)), headers: {
-      "Accept": "application/json"
+      "Accept": "appplication/json"
     });
 
     if (res.statusCode == 200) {
@@ -47,13 +47,13 @@ class CovidPatientRepository extends PatientRepository {
 
   @override
   Future<Map<String, List<MyStateSingleValue>>> fetchStatePatientDailyData(String stateCode) async {
-    Map<String, List<MyStateSingleValue>> statePatientDataMap = {};
+    Map<String, List<MyStateSingleValue>> statePatientDataMap = Map();
     List<MyStateData> statePatientDataList = [];
     List<DailyData> statePatientDailyDataList = [];
     String stateDailyDataUrl = "https://api.covid19india.org/states_daily.json";
 
     var stateDailyRes = await http.get(Uri.parse(Uri.encodeFull(stateDailyDataUrl)), headers: {
-      "Accept": "application/json",
+      "Accept": "appplication/json",
     });
 
     if (stateDailyRes.statusCode == 200) {
@@ -147,7 +147,7 @@ class CovidPatientRepository extends PatientRepository {
     List<MyStateData> districtWiseData = [];
     String districtWiseUrl = "https://api.covid19india.org/v2/state_district_wise.json";
     var districtWiseRes = await http.get(Uri.parse(Uri.encodeFull(districtWiseUrl)), headers: {
-      "Accept": "application/json",
+      "Accept": "appplication/json",
     });
 
     if (districtWiseRes.statusCode == 200) {
