@@ -1,6 +1,10 @@
-/*import 'package:covid_self_care_app/login.dart';
+import 'package:covid_self_care_app/login.dart';
 import 'package:covid_self_care_app/nearby_interface.dart';
 import 'package:covid_self_care_app/registration.dart';
+import 'package:covid_self_care_app/screens/dashboard.dart';
+import 'package:covid_self_care_app/screens/home.dart';
+import 'package:covid_self_care_app/screens/india.dart';
+import 'package:covid_self_care_app/screens/info.dart';
 import 'package:covid_self_care_app/welcome_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -18,15 +22,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: WelcomeScreen(),
       routes: {
+        Home.id: (context) => Home(),
         WelcomeScreen.id: (context) => WelcomeScreen(),
         RegistrationScreen.id: (context) => RegistrationScreen(),
         LoginScreen.id: (context) => LoginScreen(),
         NearbyInterface.id: (context) => NearbyInterface(),
+        Dashboard.id: (context) => Dashboard(),
+        India.id: (context)=>India(),
+        KnowMore.id: (context)=> KnowMore(),
       },
     );
   }
-}*/
-import 'package:covid_self_care_app/services/analytics.dart';
+}
+/*import 'package:covid_self_care_app/services/analytics.dart';
 import 'package:covid_self_care_app/ui/pages/homepage.dart';
 //import 'package:covid_self_care_app/ui/pages/homepage.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
@@ -58,5 +66,6 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
     );
   }
-}
+}*/
+
 

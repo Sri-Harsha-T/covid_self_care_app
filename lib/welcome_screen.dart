@@ -17,7 +17,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('images/bg1.jpg'),
+          image: AssetImage('images/logo.gif'),
           fit: BoxFit.cover,
         ),
       ),
@@ -31,14 +31,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           ),
           RoundedButton(
             title: 'Log In',
-            colour: Colors.deepPurple[400]!,
+            colour: Colors.blue[400]!,
             onPressed: () {
               Navigator.pushNamed(context, LoginScreen.id);
             },
           ),
           RoundedButton(
             title: 'Register',
-            colour: Colors.deepPurpleAccent,
+            colour: Colors.blueAccent,
             onPressed: () {
               Navigator.pushNamed(context, RegistrationScreen.id);
             },

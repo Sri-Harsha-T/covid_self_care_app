@@ -35,6 +35,7 @@ class StatewiseBloc extends Bloc<StatewiseEvent, StatewiseState> {
       }
       }*/
   }
+
   Future<void> _onGetPatientData(GetPatientData event, Emitter<StatewiseState> emitter) async {
     final patientData = await patientRepository.fetchPatientData();
     emit(StatewiseLoaded(patientDataMap: patientData));

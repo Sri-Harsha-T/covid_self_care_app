@@ -1,6 +1,8 @@
 import 'package:covid_self_care_app/components/rounded_button.dart';
 import 'package:covid_self_care_app/constants.dart';
 import 'package:covid_self_care_app/nearby_interface.dart';
+import 'package:covid_self_care_app/screens/dashboard.dart';
+import 'package:covid_self_care_app/screens/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
@@ -23,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/bg1.jpg'),
+            image: AssetImage('images/logo.gif'),
             fit: BoxFit.cover,
           ),
         ),
@@ -61,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 RoundedButton(
                   title: 'Log In',
-                  colour: Colors.deepPurpleAccent,
+                  colour: Colors.blueAccent,
                   onPressed: () async {
                     setState(() {
                       showSpinner = true;
@@ -70,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       final user = await _auth.signInWithEmailAndPassword(
                           email: email, password: password);
                       if (user != null) {
-                        Navigator.pushNamed(context, NearbyInterface.id);
+                        Navigator.pushNamed(context, Home.id);
                       }
 
                       setState(() {

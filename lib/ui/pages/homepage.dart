@@ -79,6 +79,7 @@ class HomePage extends StatelessWidget {
                                   print(state.error);
                                   return showNoDataScreen();
                                 }
+                                //print('Hello');
                                 return showLoadingScreen();
                               }
                               catch(error){

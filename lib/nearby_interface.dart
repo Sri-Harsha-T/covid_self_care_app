@@ -149,13 +149,13 @@ class _NearbyInterfaceState extends State<NearbyInterface> {
       appBar: AppBar(
         leading: Icon(
           Icons.menu,
-          color: Colors.deepPurple[800],
+          color: Colors.lightBlueAccent[800],
         ),
         centerTitle: true,
         title: Text(
-          'TracerX',
+          'CS251',
           style: TextStyle(
-            color: Colors.deepPurple[800],
+            color: Colors.blue[800],
             fontWeight: FontWeight.bold,
             fontSize: 28.0,
           ),
@@ -176,7 +176,7 @@ class _NearbyInterfaceState extends State<NearbyInterface> {
                 height: 100.0,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.deepPurple[500],
+                  color: Colors.blueAccent[500],
                   borderRadius: BorderRadius.circular(20.0),
                   boxShadow: [
                     BoxShadow(
@@ -218,7 +218,7 @@ class _NearbyInterfaceState extends State<NearbyInterface> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0)),
               elevation: 5.0,
-              color: Colors.deepPurple[400],
+              color: Colors.blueAccent[400],
               onPressed: () async {
                 try {
                   bool a = await Nearby().startAdvertising(
@@ -275,4 +275,3 @@ class _NearbyInterfaceState extends State<NearbyInterface> {
 
 // TODO: Take mobile number instead of email
 
-// TODO: Delete contacts older than 14 days from database

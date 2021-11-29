@@ -27,7 +27,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('images/bg1.jpg'),
+            image: AssetImage('images/logo.gif'),
             fit: BoxFit.cover,
           ),
         ),
@@ -76,7 +76,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 ),
                 RoundedButton(
                   title: 'Register',
-                  colour: Colors.deepPurpleAccent,
+                  colour: Colors.blueAccent,
                   onPressed: () async {
                     setState(() {
                       showSpinner = true;
