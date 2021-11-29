@@ -19,6 +19,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   late String email;
   late String password;
   late String userName;
+  late String Name;
+  late String Age;
+  late String Gender;
+  late String Health_Status;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +52,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       kTextFieldDecoration.copyWith(hintText: 'Username'),
                 ),
                 SizedBox(
-                  height: 8.0,
+                  height: 4.0,
                 ),
                 TextField(
                   keyboardType: TextInputType.emailAddress,
@@ -60,7 +64,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       hintText: 'Enter your email'),
                 ),
                 SizedBox(
-                  height: 8.0,
+                  height: 4.0,
                 ),
                 TextField(
                   obscureText: true,
@@ -72,7 +76,55 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       hintText: 'Enter your password'),
                 ),
                 SizedBox(
-                  height: 24.0,
+                  height: 4.0,
+                ),
+                TextField(
+                  keyboardType: TextInputType.name,
+                  textAlign: TextAlign.center,
+                  onChanged: (value) {
+                    Name = value;
+                  },
+                  decoration: kTextFieldDecoration.copyWith(
+                      hintText: 'Enter your Name'),
+                ),
+                SizedBox(
+                  height: 4.0,
+                ),
+                TextField(
+                  keyboardType: TextInputType.number,
+                  textAlign: TextAlign.center,
+                  onChanged: (value) {
+                    Age = value;
+                  },
+                  decoration: kTextFieldDecoration.copyWith(
+                      hintText: 'Enter your Age'),
+                ),
+                SizedBox(
+                  height: 4.0,
+                ),
+                TextField(
+                  keyboardType: TextInputType.name,
+                  textAlign: TextAlign.center,
+                  onChanged: (value) {
+                    Gender = value;
+                  },
+                  decoration: kTextFieldDecoration.copyWith(
+                      hintText: 'Enter your Gender'),
+                ),
+                SizedBox(
+                  height: 4.0,
+                ),
+                TextField(
+                  keyboardType: TextInputType.name,
+                  textAlign: TextAlign.center,
+                  onChanged: (value) {
+                    Health_Status = value;
+                  },
+                  decoration: kTextFieldDecoration.copyWith(
+                      hintText: 'Enter your Health Status'),
+                ),
+                SizedBox(
+                  height: 12.0,
                 ),
                 RoundedButton(
                   title: 'Register',
@@ -88,6 +140,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       if (newUser != null) {
                         _firestore.collection('users').doc(email).set({
                           'username': userName,
+                          'name': Name,
+                          'age': Age,
+                          'gender': Gender,
+                          'health_status': Health_Status,
                         });
                         Navigator.pushNamed(context, NearbyInterface.id);
                       }
